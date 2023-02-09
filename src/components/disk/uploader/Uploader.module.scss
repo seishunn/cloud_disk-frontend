@@ -1,0 +1,83 @@
+.uploader {
+  position: fixed;
+  bottom: 0;
+  right: 24px;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  border: 1px solid rgb(32, 33, 36);
+  width: 362px;
+
+  &_header {
+    display: flex;
+    background: rgb(32, 33, 36);
+    color: rgb(218,220,224);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: initial;
+    padding: 15px 24px;
+    cursor: default;
+    align-items: center;
+    justify-content: space-between;
+
+    .close {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+
+      &:hover::before {
+        transition: all .3s ease;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+
+      &:hover::after {
+        transition: all .3s ease;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        top: 50%;
+        transition: all .1s ease;
+      }
+      &::before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+  &_list {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 700px) {
+  .uploader {
+    &_header {
+      padding: 10px;
+      .close {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .uploader {
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    border: 1px solid rgb(32, 33, 36);
+  }
+}

@@ -1,0 +1,36 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_form {
+    width: 500px;
+
+    .close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 30px;
+      max-width: 30px;
+      min-height: 30px;
+      max-height: 30px;
+      border-bottom-right-radius: 4px;
+      position: absolute;
+      cursor: pointer;
+      background: rgb(252, 110, 110);
+      color: white;
+      transition: all .3s ease;
+      &:hover {
+        font-size: 20px;
+        transition: all .3s ease;
+      }
+    }
+  }
+}

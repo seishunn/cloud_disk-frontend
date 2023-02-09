@@ -1,0 +1,116 @@
+.file {
+  display: grid;
+  grid-template-columns: 70px 1fr repeat(2, 150px);
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(218, 220, 224);
+  align-items: center;
+  cursor: default;
+  position: relative;
+  overflow-x: hidden;
+
+  & > span {
+    max-width: calc(100% - 10px);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &:hover {
+    background: rgb(242, 243, 243);
+    .file_type svg {
+      fill: rgba(0, 30, 161, 0.9);
+    }
+    .buttons {
+      transform: translateX(0);
+    }
+  }
+
+  &_plate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &_type {
+      svg{
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &_title {
+      align-items: center;
+      cursor: default;
+      padding: 3px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1 1 auto;
+    }
+
+    &:hover {
+      background: rgb(242, 243, 243);
+      .file_plate_type svg {
+        fill: rgba(0, 30, 161, 0.9);
+      }
+
+      .plate_buttons {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.buttons {
+  transform: translateX(100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(38, 86, 255, 0.6), rgba(26, 66, 255, 0.9));
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: all .1s ease;
+
+  & > span {
+    margin: 0 10px;
+    fill: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    &:hover {
+      fill: #fff;
+      transition: all .3s ease 0s;
+    }
+  }
+}
+
+.plate_buttons {
+  opacity: 0;
+  & > span {
+    margin: 2px;
+    cursor: pointer;
+    &:hover {
+      fill: rgba(0, 30, 161, 0.9);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .file {
+    grid-template-columns: 70px 1fr repeat(2, 80px);
+  }
+}
+@media (max-width: 800px) {
+  .file {
+    grid-template-columns: 50px 1fr repeat(2, 80px);
+  }
+}

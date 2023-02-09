@@ -1,0 +1,35 @@
+.btn {
+  padding: 10px;
+  min-width: 100px;
+  border-radius: 4px;
+  background: rgb(26, 115, 232);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(27, 102, 202);
+  }
+
+  &_error {
+    background: rgb(255, 85, 85);
+    &:hover {
+      background: rgb(208, 0, 0);
+    }
+  }
+
+  &_ghost {
+    background: rgb(225, 225, 225);
+    color: #000;
+    &:hover {
+      background: rgb(178, 178, 178);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    min-width: 0;
+  }
+}

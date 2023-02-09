@@ -1,0 +1,13 @@
+.link {
+  color: rgb(26, 115, 232);
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+
+  &:hover {
+    color: rgb(27, 102, 202);
+    background: rgb(246, 250, 254);
+  }
+}

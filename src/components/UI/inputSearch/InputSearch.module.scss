@@ -1,0 +1,22 @@
+.inputSearch {
+  position: relative;
+
+  .search {
+    position: absolute;
+    display: flex;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  input {
+    width: 100%;
+    background: rgb(241, 243, 244);
+    padding: 14px 14px 14px 40px;
+    border-radius: 8px;
+
+    &::placeholder {
+      color: #000;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.uploaderFile {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid rgb(32, 33, 36);
+  background: white;
+
+  &_title {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 1;
+  }
+
+  &_loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 51, 255, 0.5);
+  }
+  &_percent {
+    color: green;
+    font-weight: 700;
+  }
+}
+
+.close {
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 5px;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    top: 50%;
+    transition: all .1s ease;
+  }
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .uploaderFile {
+    padding: 5px;
+  }
+}

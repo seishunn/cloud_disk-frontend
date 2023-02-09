@@ -1,0 +1,26 @@
+.authForm {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(218, 220, 224);
+  padding: 40px 30px;
+  border-radius: 4px;
+  max-width: 500px;
+
+  &_title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &_input_list {
+    & > div:last-child {
+      margin: 0;
+    }
+    margin-bottom: 30px;
+  }
+  &_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

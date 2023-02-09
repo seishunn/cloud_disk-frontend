@@ -1,0 +1,17 @@
+.load_file {
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, .1);
+    text-align: center;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+  }
+}
